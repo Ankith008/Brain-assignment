@@ -1,3 +1,4 @@
+Live site : https://brain-assignment.vercel.app/
 This project aims to provide user authentication functionality along with email verification. Additionally, it offers a secure platform for users to view posts, with access granted only to authenticated users. Users can also update their email and password securely within the system.
 
 #Features:
