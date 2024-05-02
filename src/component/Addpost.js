@@ -39,7 +39,7 @@ export default function Addpost() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/post/createpost",
+        "https://brain-assignment-back.onrender.com/post/createpost",
         formData,
         {
           headers: {

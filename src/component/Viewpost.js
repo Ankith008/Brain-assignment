@@ -17,7 +17,7 @@ export default function Viewpost() {
   const fetchPosts = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/post/getpost/${page}`,
+        `https://brain-assignment-back.onrender.com/post/getpost/${page}`,
 
         {
           headers: {

@@ -59,7 +59,7 @@ export default function Signup() {
         formData.append("profile", image);
 
         const response = await axios.post(
-          "http://localhost:5000/auth/createuser",
+          "https://brain-assignment-back.onrender.com/auth/createuser",
           formData
         );
         const json = response.data;
@@ -76,10 +76,13 @@ export default function Signup() {
         }
       } else {
         const { email, password } = userData;
-        const response = await axios.post("http://localhost:5000/auth/login", {
-          email,
-          password,
-        });
+        const response = await axios.post(
+          "https://brain-assignment-back.onrender.com/auth/login",
+          {
+            email,
+            password,
+          }
+        );
         const json = response.data;
         if (json.success) {
           setalerthead("Success");
