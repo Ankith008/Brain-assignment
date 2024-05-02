@@ -104,6 +104,14 @@ export default function Signup() {
     }
   };
 
+  const handlesubmitclick = async()=>{
+    if(mode === "signup"){
+      setalerthead("Notice");
+          setalertdesc("Verification Code Send To Your Gmail");
+          setshowalert(true);
+  }
+  }
+
   return (
     <>
       <div className="outer flex justify-center items-center h-screen bg-[#1a1d2e] font-Poppins ">
@@ -193,7 +201,7 @@ export default function Signup() {
           )}
           <div className="buttons flex flex-col gap-[10px]">
             <button
-              type="submit"
+              type="submit" onclick={()=>handlesubmitclick()}
               className="p-[10px] rounded-[9px] border-[1px] border-[solid] border-[#ccc] w-full bg-[#1a1d2e] text-[white] cursor-pointer"
             >
               {mode === "signup" ? "Sign Up" : "Login"}
