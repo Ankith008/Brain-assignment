@@ -62,6 +62,9 @@ export default function Signup() {
           "https://brain-assignment-back.onrender.com/auth/createuser",
           formData
         );
+        setalerthead("Notification");
+        setalertdesc("Verification Link Sent to Your Email");
+        setshowalert(true);
         const json = response.data;
         if (json.success) {
           setalerthead("Success");
