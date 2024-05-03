@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-// import "../css/Signup.css";
 import defaultImage from "../images/default.jpg";
 import editingIcon from "../images/editing.png";
 import axios from "axios";
@@ -104,7 +103,7 @@ export default function Signup() {
     }
   };
 
-  const handlesubmitclick = async()=>{
+  const handleSubmitClick = async()=>{
     if(mode === "signup"){
       setalerthead("Notice");
           setalertdesc("Verification Code Send To Your Gmail");
@@ -201,7 +200,7 @@ export default function Signup() {
           )}
           <div className="buttons flex flex-col gap-[10px]">
             <button
-              type="submit" onclick={()=>handlesubmitclick()}
+              type="submit" onClick={handleSubmitClick}
               className="p-[10px] rounded-[9px] border-[1px] border-[solid] border-[#ccc] w-full bg-[#1a1d2e] text-[white] cursor-pointer"
             >
               {mode === "signup" ? "Sign Up" : "Login"}
